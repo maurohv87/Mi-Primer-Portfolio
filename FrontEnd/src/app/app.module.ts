@@ -15,6 +15,11 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
 import { HardSoftSkillsComponent } from './components/hard-soft-skills/hard-soft-skills.component';
 import { ProyectoComponent } from './components/proyecto/proyecto.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { InvestigacionComponent } from './components/investigacion/investigacion.component';
+import { ContactoComponent } from './components/contacto/contacto.component';
+import { ButtonArribaComponent } from './components/button-arriba/button-arriba.component';
+
+
 
 @NgModule({
   declarations: [
@@ -29,6 +34,11 @@ import { FooterComponent } from './components/footer/footer.component';
     HardSoftSkillsComponent,
     ProyectoComponent,
     FooterComponent,
+    InvestigacionComponent,
+    ContactoComponent,
+    ButtonArribaComponent,
+
+
   ],
   imports: [
     BrowserModule,
