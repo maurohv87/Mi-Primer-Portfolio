@@ -18,7 +18,14 @@ import { FooterComponent } from './components/footer/footer.component';
 import { InvestigacionComponent } from './components/investigacion/investigacion.component';
 import { ContactoComponent } from './components/contacto/contacto.component';
 import { ButtonArribaComponent } from './components/button-arriba/button-arriba.component';
-
+import { HomeComponent } from './components/home/home.component';
+import { LoginComponent } from './components/login/login.component';
+import { FormsModule } from '@angular/forms';
+import { interceptorProvider } from './service/interceptor-service';
+import { NewExperienciaComponent } from './components/experiencia/new-experiencia.component';
+import { EditExperienciaComponent } from './components/experiencia/edit-experiencia.component';
+import { NeweducacionComponent } from './components/educacion/neweducacion.component';
+import { EditeducacionComponent } from './components/educacion/editeducacion.component';
 
 
 @NgModule({
@@ -37,6 +44,12 @@ import { ButtonArribaComponent } from './components/button-arriba/button-arriba.
     InvestigacionComponent,
     ContactoComponent,
     ButtonArribaComponent,
+    HomeComponent,
+    LoginComponent,
+    NewExperienciaComponent,
+    EditExperienciaComponent,
+    NeweducacionComponent,
+    EditeducacionComponent,
 
 
   ],
@@ -44,9 +57,13 @@ import { ButtonArribaComponent } from './components/button-arriba/button-arriba.
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    NgCircleProgressModule.forRoot({})
+    NgCircleProgressModule.forRoot({}),
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [
+    interceptorProvider
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

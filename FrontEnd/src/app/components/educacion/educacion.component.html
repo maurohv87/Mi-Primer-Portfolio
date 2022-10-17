@@ -20,14 +20,43 @@
         <div class="img">
         <a href="https://www.instagram.com/fda_unlp/"><img src="../../../assets/fda unlp inst.png" id="img"></a>
         <a href="https://www.youtube.com/watch?v=fZrm9h3JRGs&ab_channel=DeutscheGrammophon-DG"><img src="../../../assets/negra.png" style="left: 1200px; 
-            width: 7%; border-radius: 0%; box-shadow: 0px 0px 0px grey; top:1548px; left: 6%;"></a>
+            width: 7%; border-radius: 0%; box-shadow: 0px 0px 0px grey; top:1630px; left: 6%;"></a>
             <a href="https://www.youtube.com/watch?v=uT3SBzmDxGk&ab_channel=2CELLOS"><img src="../../../assets/semicorcheas.png" style="left: 1200px; 
-               width: 6%; border-radius: 0%; box-shadow: 0px 0px 0px grey; top:1640px; left: 6%;"></a>
+               width: 6%; border-radius: 0%; box-shadow: 0px 0px 0px grey; top:1720px; left: 6%;"></a>
                <a href="https://www.icmpc.org/index.html" ><img src="../../../assets/ICMPC-logo.png" style="top: 1900px; box-shadow: 0.1px 0.1px 0.1px; border-radius:0%; width: 180px; ;"></a>
     </div>
 
 
+    <div class="row">
+        <div class="col-lg-2">
+            <button type="button" class="btn btn-dark" routerLink="/nuevaedu" *ngIf="isLogged">
+                Agregar Educacion
+            </button>
+        </div>
     
+        <div class="col lg 1"></div>
+        <div class="col-lg-11">
+            <table class="table">
+                <tbody>
+                    <tr *ngFor="let Educacion of educacion">
+                        <td>
+                            <h2>{{Educacion.nombreE}}</h2>
+                        </td>
+                        <td>{{Educacion.descripcionE}}</td>
+                        <td *ngIf="isLogged">
+                            <button class="btn btn-light" routerLink="/editedu/{{Educacion.id}}">
+                                <i class="bi bi-pencil-fill"></i> EDITAR</button>
+                        </td>
+                        <td *ngIf="isLogged">
+                            <button class="btn btn-danger" (click)="delete(Educacion.id)">
+                                <i class="bi bi-trash-fill"></i> BORRAR</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    
+    </div>
 
     
    

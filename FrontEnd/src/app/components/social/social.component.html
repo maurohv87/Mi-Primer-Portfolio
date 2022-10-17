@@ -4,7 +4,7 @@
     <a href="https://www.instagram.com/mauro_hv/"><img src="../../../assets/instagram.png" id="instagram"></a>
     <a href="https://github.com/maurohv87"><img src="../../../assets/github.png" id="github"></a>
     <a href="https://www.facebook.com/mauro.valicente1"><img src="../../../assets/facebook.png" id="facebook"></a>
-    <button type="button" class="btn btn-outline-light">INGRESO</button>
-
+    <button type="button" class="btn btn-outline-light" (click)="login()" *ngIf="!isLogged">INGRESO</button>
+    <button type="button" class="btn btn-outline-light" (click)="onLogOut()"*ngIf="isLogged">CERRAR SESION</button>
    
 </div>
