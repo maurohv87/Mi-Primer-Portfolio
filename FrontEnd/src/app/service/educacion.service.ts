@@ -7,6 +7,7 @@ import { Educacion } from '../model/educacion';
   providedIn: 'root'
 })
 export class EducacionService {
+  //URL = 'https://heroku-backendmhv.herokuapp.com/educacion/';
   URL = 'https://heroku-backendmhv.herokuapp.com/educacion/';
 
   constructor(private httpClient : HttpClient) { }
@@ -31,3 +32,5 @@ export class EducacionService {
     return this.httpClient.delete<any>(this.URL + `delete/${id}`);
   }
 }
+
+
