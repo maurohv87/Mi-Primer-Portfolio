@@ -10,7 +10,7 @@ import { NuevoUsuario } from '../model/nuevo-usuario';
 })
 export class AuthService {
   //authURL = 'https://heroku-backendmhv.herokuapp.com/auth/';
-  authURL = 'https://heroku-backendmhv.herokuapp.com/auth/';
+  authURL = ' https://argprogmau.herokuapp.com/auth/';
 
   constructor(private httpClient: HttpClient) { }
   
