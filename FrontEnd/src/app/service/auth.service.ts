@@ -9,8 +9,8 @@ import { NuevoUsuario } from '../model/nuevo-usuario';
   providedIn: 'root'
 })
 export class AuthService {
-  //authURL = 'https://heroku-backendmhv.herokuapp.com/auth/';
-  authURL = ' https://argprogmau.herokuapp.com/auth/';
+  
+  authURL = 'https://argprogmau.herokuapp.com/auth/';
 
   constructor(private httpClient: HttpClient) { }
   
@@ -18,6 +18,7 @@ export class AuthService {
     return this.httpClient.post<any>(this.authURL + 'nuevo', nuevoUsuario);
   }
   public login(loginUsuario: LoginUsuario): Observable<JwtDto>{
+    console.log("hola");
     return this.httpClient.post<JwtDto>(this.authURL + 'login', loginUsuario)
   }
 }
